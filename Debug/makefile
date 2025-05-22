@@ -10,7 +10,9 @@ GEN_OPTS__FLAG :=
 GEN_CMDS__FLAG := 
 
 ORDERED_OBJS += \
+"./GPIOx.obj" \
 "./Motores.obj" \
+"./SysTick.obj" \
 "./main.obj" \
 "./tm4c1294ncpdt_startup_ccs.obj" \
 "../tm4c1294ncpdt.cmd" \
@@ -143,8 +145,8 @@ PF_SistemasEmbebidos_Embotelladora.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 # Other Targets
 clean:
 	-$(RM) $(EXE_OUTPUTS__QUOTED)
-	-$(RM) "Motores.obj" "main.obj" "tm4c1294ncpdt_startup_ccs.obj" 
-	-$(RM) "Motores.d" "main.d" "tm4c1294ncpdt_startup_ccs.d" 
+	-$(RM) "GPIOx.obj" "Motores.obj" "SysTick.obj" "main.obj" "tm4c1294ncpdt_startup_ccs.obj" 
+	-$(RM) "GPIOx.d" "Motores.d" "SysTick.d" "main.d" "tm4c1294ncpdt_startup_ccs.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 
